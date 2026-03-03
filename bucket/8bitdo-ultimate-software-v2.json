@@ -1,0 +1,18 @@
+{
+    "version": "1.30",
+    "description": "The latest version supporting most new devices. It integrates customization features and firmware updates. (Recommended for download. For older devices, please use Ultimate Software V1.)",
+    "homepage": "https://app.8bitdo.com/",
+    "license": "Proprietary",
+    "url": "https://download.8bitdo.com/Ultimate-Software/8BitDo_Ultimate_Software_V2_Windows_V1.30.zip",
+    "pre_install": [
+        "Move-Item \"$dir\\8BitDo_Ultimate_Software_V2_Windows_V$version\\*\" $dir",
+        "Remove-Item \"$dir\\8BitDo_Ultimate_Software_V2_Windows_V$version\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
+    ],
+    "persist": "Config",
+    "shortcuts": [
+        ["8BitDo Ultimate Software V2.exe", "8BitDo Ultimate Software V2"]
+    ],
+    "autoupdate": {
+        "url": "https://download.8bitdo.com/Ultimate-Software/8BitDo_Ultimate_Software_V2_Windows_V$version.zip"
+    }
+}
